@@ -18,8 +18,7 @@
     "redux": "^4.0.1",
     "redux-axios-middleware": "^4.0.0",
     "redux-persist": "^5.10.0",
-    "redux-thunk": "^2.3.0",
-    "remote-redux-devtools": "^0.5.14"
+    "redux-thunk": "^2.3.0"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",
