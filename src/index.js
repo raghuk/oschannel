@@ -1,43 +1,35 @@
-import React, { Component } from 'react';
-import { StyleSheet, View, Text } from 'react-native';
+import React from 'react';
+import { Provider } from 'react-redux';
+import { PersistGate } from 'redux-persist/integration/react';
+import axios from 'axios';
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF'
+import configureStore from './redux';
+import Setup from './setup';
+
+// all axios can be used, shown in axios documentation
+const clients = {
+  default: {
+    client: axios.create({
+      baseURL: 'https://www.googleapis.com/youtube/v3',
+      responseType: 'json'
+    })
   },
-  note: {
-    fontSize: 24,
-    fontWeight: '900',
-    textAlign: 'center'
+  getContent: {
+    client: axios.create({
+      baseURL: 'http://www.apps.omshantitv.org/wp-json/posts',
+      responseType: 'json'
+    })
   }
-});
+};
 
+const { store, persistor } = configureStore(clients);
 
-class Main extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      isReady: false
-    };
-  }
-
-  componentDidMount = () => {
-    setTimeout(() => this.setState({ isReady: true }), 2000);
-  };
-
-  render() {
-    const { isReady } = this.state;
-
-    return (
-      <View style={styles.container}>
-        <Text style={styles.note}>{isReady ? 'Hello World!' : 'getting ready...'}</Text>
-      </View>
-    );
-  }
-}
+const Main = () => (
+  <Provider store={store}>
+    <PersistGate loading={null} persistor={persistor}>
+      <Setup />
+    </PersistGate>
+  </Provider>
+);
 
 export default Main;
