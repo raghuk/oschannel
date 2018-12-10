@@ -22,6 +22,7 @@
         "react/destructuring-assignment": ["error", "always", { "ignoreClassFields": true }],
         "react/forbid-prop-types": ["error", { "forbid": ["any", "array"] }],
         "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+        "react/jsx-one-expression-per-line": ["off", { "allow": "single-child" }],
         "react/prop-types": ["error", { "ignore": ["navigation"] }]
     }
 }

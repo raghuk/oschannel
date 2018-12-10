@@ -12,6 +12,7 @@ const styles = StyleSheet.create({
   },
   welcome: {
     fontSize: 20,
+    fontFamily: 'Titillium',
     textAlign: 'center',
     margin: 10
   }
@@ -37,8 +38,8 @@ export default class App extends Component {
     if (!isReady) {
       return (
         <View style={styles.container}>
-          <Text style={styles.text}>Setting up app...</Text>
-          <ActivityIndicator size="large" color="#05c3f9" />
+          <Text style={styles.welcome}>Setting up app...</Text>
+          <ActivityIndicator size="large" color="#372737" />
         </View>
       );
     }

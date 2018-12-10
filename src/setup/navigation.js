@@ -19,16 +19,16 @@ const AboutTab = createStackNavigator({
       headerLeft: (
         <Button
           title=""
-          buttonStyle={{ backgroundColor: '#00838f', padding: 3 }}
+          buttonStyle={{ backgroundColor: '#372737', padding: 3 }}
           icon={{ name: 'md-menu', type: 'ionicon', color: '#fdfdfd' }}
           onPress={() => navigation.openDrawer()}
         />
       ),
       headerStyle: {
-        backgroundColor: '#00838f'
+        backgroundColor: '#372737'
       },
       headerTitleStyle: {
-        color: '#fdfdfd', fontSize: 20, fontWeight: 'normal', fontFamily: 'Opensans', marginHorizontal: 5
+        color: '#fdfdfd', fontSize: 20, fontWeight: 'normal', fontFamily: 'Titillium', marginHorizontal: 5
       }
     })
   }
@@ -44,16 +44,16 @@ const LiveTab = createStackNavigator({
       headerLeft: (
         <Button
           title=""
-          buttonStyle={{ backgroundColor: '#00838f', padding: 3 }}
+          buttonStyle={{ backgroundColor: '#372737', padding: 3 }}
           icon={{ name: 'md-menu', type: 'ionicon', color: '#fdfdfd' }}
           onPress={() => navigation.openDrawer()}
         />
       ),
       headerStyle: {
-        backgroundColor: '#00838f'
+        backgroundColor: '#372737'
       },
       headerTitleStyle: {
-        color: '#fdfdfd', fontSize: 20, fontWeight: 'normal', fontFamily: 'Opensans', marginHorizontal: 5
+        color: '#fdfdfd', fontSize: 20, fontWeight: 'normal', fontFamily: 'Titillium', marginHorizontal: 5
       }
     })
   }
@@ -67,7 +67,7 @@ const MainNavigator = createDrawerNavigator(
       path: '/live',
       navigationOptions: () => ({
         drawerLabel: 'Live TV',
-        drawerIcon: <Icon name="ios-videocam" type="ionicon" color="#00838f" size={28} />
+        drawerIcon: <Icon name="ios-videocam" type="ionicon" color="#372737" size={28} />
       })
     },
     AboutTab: {
@@ -75,7 +75,7 @@ const MainNavigator = createDrawerNavigator(
       path: '/about',
       navigationOptions: () => ({
         drawerLabel: 'About Us',
-        drawerIcon: <Icon name="md-ribbon" type="ionicon" color="#00838f" size={28} />
+        drawerIcon: <Icon name="md-ribbon" type="ionicon" color="#372737" size={28} />
       })
     }
   },

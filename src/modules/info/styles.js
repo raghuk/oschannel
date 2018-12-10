@@ -11,12 +11,12 @@ export default {
   note: {
     color: '#2e78b7',
     fontSize: 16,
-    fontFamily: 'Opensans',
+    fontFamily: 'Titillium',
     marginBottom: 10
   },
   info: {
     fontSize: 16,
-    fontFamily: 'Opensans',
+    fontFamily: 'Titillium',
     marginBottom: 20
   }
 };
