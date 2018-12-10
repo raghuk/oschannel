@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { StatusBar, SafeAreaView, ImageBackground, NetInfo, Text } from 'react-native';
+import { StatusBar, SafeAreaView, ImageBackground, NetInfo } from 'react-native';
 
+import MainNavigator from './navigation';
 import { actions as appActions } from '../modules/app';
 
 const splashImage = require('../../assets/images/splash.png');
@@ -45,7 +46,7 @@ class Setup extends Component {
     return (
       <SafeAreaView style={{ flex: 1, backgroundColor: '#f1f5f8' }}>
         <StatusBar translucent barStyle="light-content" backgroundColor="rgba(0, 0, 0, 0.20)" />
-        { isReady ? <Text>Hello World!!!</Text> : loadingInfo }
+        { isReady ? <MainNavigator uriPrefix="/oschannel" /> : loadingInfo }
       </SafeAreaView>
     );
   }
