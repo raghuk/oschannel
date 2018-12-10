@@ -44,7 +44,7 @@ class Setup extends Component {
     );
 
     return (
-      <SafeAreaView style={{ flex: 1, backgroundColor: '#372737' }}>
+      <SafeAreaView style={{ flex: 1, backgroundColor: '#f1f5f8' }}>
         <StatusBar translucent barStyle="light-content" backgroundColor="rgba(0, 0, 0, 0.20)" />
         { isReady ? <MainNavigator uriPrefix="/oschannel" /> : loadingInfo }
       </SafeAreaView>
