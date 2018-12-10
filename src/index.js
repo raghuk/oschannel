@@ -10,14 +10,12 @@ import Setup from './setup';
 const clients = {
   default: {
     client: axios.create({
-      baseURL: 'https://www.googleapis.com/youtube/v3',
-      responseType: 'json'
+      baseURL: 'http://www.apps.omshantitv.org/wp-json/posts'
     })
   },
-  getContent: {
+  youtubeAPI: {
     client: axios.create({
-      baseURL: 'http://www.apps.omshantitv.org/wp-json/posts',
-      responseType: 'json'
+      baseURL: 'https://www.googleapis.com/youtube/v3'
     })
   }
 };
