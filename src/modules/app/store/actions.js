@@ -1,7 +1,7 @@
 import {
   APP_RESET,
   SET_CONNECTION_STATUS
-} from './actionTypes';
+} from './constants';
 
 
 export function appReset() {

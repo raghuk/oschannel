@@ -6,6 +6,8 @@ import { StatusBar, SafeAreaView, ImageBackground, NetInfo } from 'react-native'
 import MainNavigator from './navigation';
 import { actions as appActions } from '../modules/app';
 
+import styles from './styles';
+
 const splashImage = require('../../assets/images/splash.png');
 
 class Setup extends Component {
@@ -44,8 +46,8 @@ class Setup extends Component {
     );
 
     return (
-      <SafeAreaView style={{ flex: 1, backgroundColor: '#f1f5f8' }}>
-        <StatusBar translucent barStyle="light-content" backgroundColor="rgba(0, 0, 0, 0.20)" />
+      <SafeAreaView style={styles.droidSafeArea}>
+        <StatusBar translucent barStyle="dark-content" backgroundColor="#ecf0f1" />
         { isReady ? <MainNavigator uriPrefix="/oschannel" /> : loadingInfo }
       </SafeAreaView>
     );

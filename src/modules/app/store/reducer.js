@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-import { SET_CONNECTION_STATUS } from './actionTypes';
+import { SET_CONNECTION_STATUS } from './constants';
 
 
 const initialState = {
